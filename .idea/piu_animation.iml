@@ -24,6 +24,15 @@
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/build" />
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/ios/.symlinks/plugins/piu_animation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/ios/.symlinks/plugins/piu_animation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/ios/.symlinks/plugins/piu_animation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/piu_animation/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/ios/.symlinks/plugins/piu_animation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/ios/.symlinks/plugins/piu_animation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/piu_animation/example/ios/.symlinks/plugins/piu_animation/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
