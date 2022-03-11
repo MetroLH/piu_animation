@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:piu_animation/piu_animation.dart';
+import 'package:piu_animation/piu_loading_animation_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,6 +54,9 @@ class _PiuAnimationDemoState extends State<PiuAnimationDemo> {
   GlobalKey bottomLeftKey = GlobalKey();
   GlobalKey bottomCenterKey = GlobalKey();
   GlobalKey bottomRightKey = GlobalKey();
+
+  GlobalKey loadingTrueKey = GlobalKey();
+  GlobalKey loadingFalseKey = GlobalKey();
 
   GlobalKey floatingKey = GlobalKey();
 
@@ -118,6 +122,25 @@ class _PiuAnimationDemoState extends State<PiuAnimationDemo> {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  key: loadingTrueKey,
+                  onPressed: () {
+                    addCart(loadingTrueKey,loadingCallBack: loadingSuccessFunction);
+                  },
+                  child: const Text("LoadingTrue"),
+                ),
+                ElevatedButton(
+                  key: loadingFalseKey,
+                  onPressed: () {
+                    addCart(loadingFalseKey,loadingCallBack: loadingFieldFunction);
+                  },
+                  child: const Text("LoadingFalse"),
+                ),
+              ],
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
@@ -156,7 +179,21 @@ class _PiuAnimationDemoState extends State<PiuAnimationDemo> {
     );
   }
 
-  void addCart(GlobalKey key) {
+  //任务成功
+  Future<bool> loadingSuccessFunction() {
+    return Future.delayed(const Duration(milliseconds: 2000),(){
+      return true;
+    });
+  }
+
+  //任务失败
+  Future<bool> loadingFieldFunction() {
+    return Future.delayed(const Duration(milliseconds: 2000),(){
+      return false;
+    });
+  }
+
+  void addCart(GlobalKey key, {LoadingCallback? loadingCallBack}) {
     //显示的widget
     Widget piuWidget = Container(
       color: Colors.redAccent,
@@ -171,10 +208,15 @@ class _PiuAnimationDemoState extends State<PiuAnimationDemo> {
 
     PiuAnimation.addAnimation(rootKey, piuWidget, endOffset,
         maxWidth: MediaQuery.of(context).size.width,
+        loadingCallback: loadingCallBack,
         doSomethingBeginCallBack: () {
       print("动画开始");
-    }, doSomethingFinishCallBack: () {
-      print("动画结束");
+    }, doSomethingFinishCallBack: (success) {
+      if(success){
+        print("loading 成功 动画结束");
+      }else{
+        print("loading 失败 动画结束");
+      }
     });
   }
 }
