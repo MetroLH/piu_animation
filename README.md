@@ -12,7 +12,7 @@ PiuAnimation，piu~~~的一下，可用作加入购物车、保存截屏等动�
 
 ![MacDown Screenshot](https://github.com/MetroLH/piu_animation/blob/main/screenshot/loading_true.gif?raw=true)
 
-### 悬停动画er【异步任务返回false】：
+### 悬停动画二【异步任务返回false】：
 
 ![MacDown Screenshot](https://github.com/MetroLH/piu_animation/blob/main/screenshot/loading_false.gif?raw=true)
 
@@ -33,7 +33,7 @@ PiuAnimation.addAnimation(
 //其中还有动画时长、悬停最小宽度等属性设置
 ```
 
-### 添加方法【第er种，悬停loading动画】
+### 添加方法【第二种，悬停loading动画】
 
 ```java
 PiuAnimation.addAnimation(rootKey,piuWidget,endOffset,
