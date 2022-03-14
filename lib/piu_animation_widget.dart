@@ -107,7 +107,8 @@ class _PiuAnimationWidgetState extends State<PiuAnimationWidget>
       })
       ..addListener(() {
         setState(() {});
-      })..forward();
+      })
+      ..forward();
 
     //前置缩放动画
     _scaleAnimation =
